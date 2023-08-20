@@ -83,9 +83,8 @@ img {
   padding-top: 32px;
   padding-bottom: 32px;
 }
-
-.main-nav {
-  border: 1px solid #ececec;
+.header {
+  border-bottom: 1px solid #ececec;
 }
 
 .navigation {
@@ -96,7 +95,8 @@ img {
   margin-left: 50px;
 }
 
-.site-nav .link {
+.site-nav .link,
+.contact .link {
   color: var(--primary-text-color);
   font-size: 14px;
   font-weight: 500;
@@ -140,23 +140,26 @@ img {
 /* hero */
 
 .hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+
   background: #2f303a;
-  text-align: center;
 }
 
 .hero-title {
-  display: inline-block;
   width: 696px;
   height: 120px;
+  margin-right: auto;
+  margin-left: auto;
   margin-bottom: 30px;
 
   color: var(--primary-white-color);
-  text-align: center;
   font-size: 44px;
   font-weight: 900;
   line-height: 1.36;
   letter-spacing: 2.64px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .btn-hero {
@@ -206,12 +209,17 @@ img {
 .features .list {
   display: flex;
 }
+.features .item {
+  width: 270px;
+}
 
 .features .item:not(:last-child) {
   margin-right: 30px;
 }
 
 .features .section-subtitle {
+  margin-bottom: 10px;
+
   font-size: 14px;
   line-height: normal;
   letter-spacing: 0.42px;
@@ -222,6 +230,20 @@ img {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.42px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /* section project */
@@ -260,9 +282,6 @@ img {
   padding-top: 94px;
   background-color: #f5f4fa;
 }
-.team .card {
-  margin-bottom: 30px;
-}
 
 .team .section-subtitle {
   font-size: 16px;
@@ -277,23 +296,30 @@ img {
   font-size: 16px;
   line-height: normal;
   letter-spacing: 0.48px;
-
-  margin-bottom: 30px;
+}
+.card-worker {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
 }
 
 /* footer */
 
 .footer {
   background-color: #2f303a;
+
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
-.studio-footer {
+.footer .studio {
   color: #fff;
 }
 
-.footer .container {
-  padding-top: 60px;
-  padding-bottom: 60px;
+.footer .logo,
+.footer .studio {
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 .adress {
@@ -304,6 +330,13 @@ img {
   letter-spacing: 0.42px;
 
   margin-top: 20px;
+}
+.adress .list {
+  margin-top: 9px;
+}
+
+.adress .tel {
+  margin-top: 9px;
 }
 
 .adress .link {
@@ -396,4 +429,9 @@ img {
   padding-bottom: 20px;
   padding-left: 24px;
   border: 1px solid #eeeeee;
+  border-top: 0px;
+}
+
+.border-card .text {
+  margin-top: 4px;
 }
